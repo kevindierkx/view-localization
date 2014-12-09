@@ -1,11 +1,11 @@
 {
-    "name": "pcextreme/view-localization",
+    "name": "kevindierkx/view-localization",
     "description": "Localising views in Laravel",
-    "keywords": ["pcextreme", "view", "localization"],
+    "keywords": ["laravel", "view", "localization"],
     "authors": [
         {
             "name": "Kevin Dierkx",
-            "email": "kevin@pcextreme.nl"
+            "email": "contact@kevindierkx.com"
         }
     ],
     "require": {
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PCextreme\\ViewLocalization\\": "src/"
+            "Kevindierkx\\ViewLocalization\\": "src/"
         }
     },
     "minimum-stability": "stable"

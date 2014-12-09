@@ -1,24 +1,20 @@
-<?php namespace PCextreme\ViewLocalization;
+<?php namespace Kevindierkx\ViewLocalization;
 
 use Illuminate\Support\ServiceProvider;
-use PCextreme\ViewLocalization\FileViewFinder as LocalizationFileViewFinder;
+use Kevindierkx\ViewLocalization\FileViewFinder as LocalizationFileViewFinder;
 
-class ViewLocalizationServiceProvider extends ServiceProvider
-{
+class ViewLocalizationServiceProvider extends ServiceProvider {
+
     /**
-     * Boot the service provider.
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function boot()
     {
-        $this->package('pcextreme/view-localization', 'view-localization', __DIR__);
+        $this->package('kevindierkx/view-localization', 'view-localization', __DIR__);
     }
 
     /**
-     * Register bindings for the service provider.
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function register()
     {
@@ -27,9 +23,7 @@ class ViewLocalizationServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register the view finder implementation.
-     *
-     * @return void
+     * {@inheritdoc}
      */
     public function registerLocalizationViewFinder()
     {
@@ -43,8 +37,6 @@ class ViewLocalizationServiceProvider extends ServiceProvider
 
     /**
      * Register the booting event.
-     *
-     * @return void
      */
     protected function registerBootingEvent()
     {
@@ -54,4 +46,5 @@ class ViewLocalizationServiceProvider extends ServiceProvider
             $view->setFinder($app['view-localization.finder']);
         });
     }
+
 }

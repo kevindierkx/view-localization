@@ -1,11 +1,11 @@
-<?php namespace PCextreme\ViewLocalization;
+<?php namespace Kevindierkx\ViewLocalization;
 
 use Illuminate\View\FileViewFinder as IlluminateFileViewFinder;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Translation\Translator;
 
-class FileViewFinder extends IlluminateFileViewFinder
-{
+class FileViewFinder extends IlluminateFileViewFinder {
+
     /**
      * The translator implementation.
      *
@@ -61,4 +61,5 @@ class FileViewFinder extends IlluminateFileViewFinder
 
         throw new \InvalidArgumentException("View [$name] not found.");
     }
+
 }
