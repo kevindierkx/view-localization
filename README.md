@@ -1,56 +1,47 @@
-## Laravel View Localization
-
+# Laravel View Localization
 This package makes it possible to serve specific views for various locales.
 
-### Installation
+## Installation
+_This package is build for [Laravel framework](http://laravel.com) based applications._
 
-To install this package you will need:
+For Laravel 4.2+ please refer to [version 1.0](https://github.com/kevindierkx/view-localization/tree/1.0).
 
-- Laravel 4.2+
-- PHP 5.4
-
-You must then modify your composer.json file and run composer update to include the latest version of the package in your project.
-
-```
-"require": {
-    "kevindierkx/view-localization": "0.1.*"
-}
-```
-
-Or you can run the composer require command from your terminal.
+### Laravel 5.x
+Require this package with composer:
 
 ```
-composer require kevindierkx/view-localization:0.1.*
+composer require kevindierkx/view-localization
 ```
 
-Once the package is installed you need to open ```app/config/app.php``` and register the required service provider.
+### Service provider
+Open `config/app.php` and register the required service provider.
 
-```
+```php
 'providers' => [
+    ...
     'Kevindierkx\ViewLocalization\ViewLocalizationServiceProvider'
 ]
 ```
 
-### Usage
+## Usage
+Localized views are stored in files within the ```resources/views``` directory. Within this directory there should be a subdirectory for each language supported by the application.
 
-Localized views are stored in files withing the ```app/views``` directory. Within this directory there should be a subdirectory for each language supported by the application.
-
-Views that serve as a default should go in the default ```app/views``` directory.
+Views that serve as a default should go in the default ```resources/views``` directory.
 
 ```
-/app
+/resources
     /views
         /nl
             messages.blade.php
     messages.blade.php
 ```
 
-In the above example the ```nl``` locale would get a custom view, the ```en``` locale however would get the default ```messages.blade.php``` in the ```app/views``` directory.
+In the above example the ```nl``` locale would get a custom view, the ```en``` locale however would get the default ```messages.blade.php``` in the ```resources/views``` directory.
 
-### Credits
+## Credits
 
 - [Kevin Dierkx](https://github.com/kevindierkx)
 
-### License
+## License
 
 The MIT License (MIT). Please see [License File](https://github.com/kevindierkx/elicit/blob/master/LICENSE) for more information.
