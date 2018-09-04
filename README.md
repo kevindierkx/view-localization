@@ -1,3 +1,9 @@
+# Deprecation notice
+
+[mcamara/laravel-localization](https://github.com/mcamara/laravel-localization#set-current-locale-as-view-base-path) now supports using the view base path for your localization making this packages obsolete.
+
+---
+
 # Laravel View Localization
 This package makes it possible to serve specific views for various locales.
 
